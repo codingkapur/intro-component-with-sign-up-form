@@ -1,11 +1,5 @@
 'use strict'
 
-//Validate input fields:
-//First Name is not empty, remove white space. show error.
-//Last Name is not empty, remove white space.show error
-//validate email. 
-// password cannot be empty, min 8 characters
-
 const firstNameInput = document.querySelector('.first-name');
 const lastNameInput = document.querySelector('.last-name');
 const emailInput = document.querySelector('.email');
@@ -32,6 +26,8 @@ const validateFirstName = function(){
     } 
     else 
     firstNameInput.style.border="1px solid #52dd50";
+    errorMessage1.style.opacity= "0";
+        errorIcon1.style.opacity="0";
 }
 const validateLastName = function(){
     const lastName= lastNameInput.value;
@@ -43,6 +39,8 @@ const validateLastName = function(){
     } 
     else 
     lastNameInput.style.border="1px solid #52dd50";
+    errorMessage2.style.opacity= "0";
+        errorIcon2.style.opacity="0";
 }
 const validateEmail = function(){
     const email= emailInput.value;
@@ -69,6 +67,8 @@ const validatePassword = function(){
     } 
     else 
     passwordInput.style.border="1px solid #52dd50";
+    errorMessage4.style.opacity= "0";
+        errorIcon4.style.opacity="0";
 }
 
 submitFormBtn.addEventListener('click', function(){
