@@ -1,0 +1,198 @@
+/* # Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+### Primary
+
+- Red: hsl(0, 100%, 74%) 
+- Green: hsl(154, 59%, 51%)
+
+### Accent
+
+- Blue: hsl(248, 32%, 49%)
+
+### Neutral
+
+- Dark Blue: hsl(249, 10%, 26%) 
+- Grayish Blue: hsl(246, 25%, 77%)
+
+## Typography
+
+### Body Copy
+
+- Font size: 16px
+
+### Font
+
+- Family: [Poppins](https://fonts.google.com/specimen/Poppins)
+- Weights: 400, 500, 600, 700 */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-weight:400;
+    background-image: url(images/bg-intro-mobile.png);
+    background-repeat: no-repeat;
+    background-position:center;
+    background-color:hsl(0, 100%, 74%);
+}
+/*----CONTAINER---- */
+.container {
+    width:90vw;
+    max-width: 1080px;
+    height: 100vh;
+    /* border: 1px solid #123; */
+    margin: 0 auto;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+    /* grid-auto-flow: row; */
+    gap: 2rem;
+}
+/*----INFO SECTION---- */
+.info-section {
+    /* border: 1px solid #ead; */
+    text-align: center;
+    color: #fff;
+    margin-top:3rem;
+    padding: 2rem 0.5rem;
+    border-radius:10px;
+}
+
+.main-heading {
+    font-size: 2rem;
+    padding: 1.6rem;
+}
+.subtext {
+    margin-top: 1.5rem;
+    font-size: 1rem;
+    color:rgba(255,255,255,0.7);
+}
+.sign-up-section {
+    /* border: 1px solid #ead; */
+    border-radius: 10px;
+
+
+}
+.try-it-button {
+    margin: 2rem 0;
+    background-color: hsl(248, 32%, 49%);
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 1.5rem 3rem;
+    color: #fff;
+    border-radius: 10px;
+    box-shadow: 2px 8px rgba(0,0,0,0.2);
+}
+.try-it-button:hover {
+    background-color:#53498f;
+}
+.try-it-highlight {
+    font-weight: 400;
+}
+/*----SIGN UP SECTION---- */
+
+.sign-up-form {
+    padding: 1.5rem;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 5px rgba(0,0,0,0.3);
+
+}
+
+.form-input {
+    padding: 1.2rem 1rem;
+    width: 100%;
+    border-radius: 5px;
+    outline:none;
+    border: 1px solid #000;
+    font-size:0.8rem;
+    font-weight:700;
+    transition: 0.3s ease;
+}
+.label-container {
+    position: relative;
+    margin-bottom: 0.7rem;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 1rem 2rem;
+    background-color:hsl(154, 59%, 51%);
+    border: none;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.7);
+    border-radius:5px;
+    color: #fff;
+    letter-spacing: 1px;
+    font-size: 1rem;
+}
+
+.submit-btn:hover {
+    background-color: #2eb47a;
+}
+.error-icon {
+    position: absolute;
+    top:18px;
+    right:10px;
+    height: 20px;
+    opacity:0;
+}
+.error {
+    font-size: 0.6rem;
+    text-align: right;
+    font-style:italic;
+    color:hsl(0, 100%, 74%);
+    margin-top: 0.3rem;
+    opacity:0;
+}
+.terms-statement {
+    text-align: center;
+    font-size: 0.8rem;
+    margin-top: 1rem;
+    color:rgba(133, 133, 133, 0.699);
+}
+.terms-statement a {
+    text-decoration: none;
+    color: hsl(0, 100%, 74%);
+    font-weight: 500;
+}
+
+@media (min-width:850px) {
+    body {
+        background-image: url(images/bg-intro-desktop.png);
+    }
+    .info-section {
+        padding:3rem;
+    }
+    .main-heading {
+        font-size: 2.2rem;
+        text-align: left;
+        padding: 0;
+    }
+    .subtext {
+        text-align: left;
+    }
+}
